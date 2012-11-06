@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en" ng-app="myApp">
+<head>
+  <meta charset="utf-8">
+  <title>My AngularJS App</title>
+  <link rel="stylesheet" href="css/app.css"/>
+</head>
+<body>
+
+  <div ng-controller="ChannelNavigationCtrl">      
+
+
+    <div ng-show="loadingImage" id="app-loader">
+      <div id="app-loader-indicator">
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+    </div>
+    
+    <ul ng-show="!loadingImage" class="menu">
+      <li ng-repeat="channel in channelSettings">
+        <input type="checkbox" ng-model="channel.enabled" ng-change='changeChannel()'>{{channel.title}}</input>
+      </li>
+    </ul>
+  </div>
+
+  <div class='tablet' ng-view></div>
+
+  <script src="lib/angular/angular.js"></script>
+  <script src="lib/angular/angular-resource.min.js"></script>
+  <script src="lib/angular/angular-sanitize.min.js"></script>
+  <script src="lib/lawnchair.min.js"></script>
+  <script src="lib/lawnchair.sql.js"></script>
+  <script src="lib/lodash.min.js"></script>
+  <script src="lib/async.min.js"></script>
+  <script src="lib/jquery-1.8.2.min.js"></script>
+  <script src="js/app.js"></script>
+  <script src="js/services.js"></script>
+  <script src="js/controllers.js"></script>
+  <script src="js/filters.js"></script>
+  <script src="js/directives.js"></script>
+</body>
+</html>

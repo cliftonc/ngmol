@@ -1,0 +1,22 @@
+<div class='channel-table' ng-repeat="channel in channels">
+	<div class='channel'>
+		<div class='channel-header' style='background-color: red;'>
+			<div class='inner'>
+				<span class='title'>{{channel.title}}</span>
+			</div>
+		</div>	
+	    <div class='channel-column'>        
+	        <article ng-repeat="article in channel.items">
+				<a data-href="#{sn}/{aId}" class="tap-link"  ng-click="openArticle()" ng-tap="openArticle()">
+					<span>
+						<strong>{{article.title}}</strong>					
+						<img class="large-image" ng-src="{{getImage('lg')}}" alt="" width="308" height="185" />			
+						<em>{{article.desc}}</em>
+					</span>
+					<img class="puff-image" ng-src="{{getImage('pf')}}" alt="" width="154" height="115" />
+				</a>
+			</article>
+	    </div>
+	</div>
+</div>
+
