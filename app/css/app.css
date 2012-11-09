@@ -116,6 +116,7 @@ body {
 
 .channel {
   float: left;     
+  height: 800px;
 }
 
 .channel-header {
