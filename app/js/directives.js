@@ -5,7 +5,7 @@
 
 angular.module('myApp.directives', []).directive('ngFullHeight', function() {
     return function(scope, element, attrs) {               
-      $(".channel-table").css("height", '1100px !important');
+      //
     }
   }) 
   .directive('ngTap', function() {
